@@ -1,0 +1,24 @@
+{
+  "name": "es-api-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "doctor": "clinic doctor --on-port 'autocannon -c 20 --duration 100 -t 1000  -a 200  http://localhost:3000/api/lines' -- node src/index.js",
+    "flame": "clinic flame --on-port 'autocannon -c 20 --duration 100 -t 1000  -a 200  http://localhost:3000/api/lines' -- node src/index.js",
+    "bubble": "clinic bubbleprof --on-port 'autocannon -c 10 --duration 100 -t 1000  -a 10  http://localhost:3000/api/lines' -- node src/index.js"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "autocannon": "^7.8.1",
+    "clinic": "^11.1.0",
+    "event-stream": "^4.0.1",
+    "express": "^4.17.3",
+    "performance-now": "^2.1.0",
+    "toobusy-js": "^0.5.1"
+  }
+}
