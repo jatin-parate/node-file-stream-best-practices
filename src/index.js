@@ -1,5 +1,10 @@
 const http = require("http");
 const toobusy = require("toobusy-js");
+const fs = require("graceful-fs");
+const realFs = require("fs");
+
+fs.gracefulify(realFs);
+
 const app = require("./app");
 
 const server = http.createServer(app);
