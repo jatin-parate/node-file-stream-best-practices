@@ -9,9 +9,9 @@ return them as array of strings.
 
 Used `event-stream` to efficiently read one line at a time from file without storing whole file contents in memory.
 
-## Toobusy
+## Toobusy-js
 
-Used `toobusy` to check if server is too busy to handle request.
+Used `toobusy-js` to check if server is too busy to handle request.
 
 ## Graceful-fs
 
